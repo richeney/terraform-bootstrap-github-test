@@ -1,5 +1,5 @@
 ---
-name: Terraform deployment
+name: Terraform deployment ${{ github.event.inputs.terraform_action == 'destroy' && '(Destroy)'}}
 on:
   workflow_dispatch:
     inputs:
@@ -67,7 +67,7 @@ jobs:
 
   apply:
     needs: plan
-    name: Terraform Apply
+    name: Terraform ${{ github.event.inputs.terraform_action == 'destroy' && 'Destroy' || 'Apply' }}
     runs-on:
       ubuntu-latest
     concurrency: tfstate
