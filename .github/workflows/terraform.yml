@@ -1,5 +1,5 @@
 ---
-name: Terraform deployment ${{ github.event.inputs.terraform_action == 'destroy' && '(Destroy)'}}
+name: Terraform deployment
 on:
   workflow_dispatch:
     inputs:
