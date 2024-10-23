@@ -1,5 +1,5 @@
 ---
-name: Terraform deployment
+name: Terraform Apply
 on:
   workflow_dispatch:
     inputs:
