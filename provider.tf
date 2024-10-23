@@ -8,3 +8,10 @@ terraform {
 
   backend "azurerm" {}
 }
+
+provider "azurerm" {
+  features {}
+
+  resource_provider_registrations = "none"
+  subscription_id                 = "3382c75c-900e-4eec-a55e-abeae7647561"
+}
